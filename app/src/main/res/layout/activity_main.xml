@@ -1,84 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:orientation="horizontal">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FF0000"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FF5722"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FFEB3B"/>
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#000000"
+        android:layout_centerInParent="true"/>
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#545454"
+        android:layout_toStartOf="@id/center"
+        android:layout_above="@id/center"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#FF7000">
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#386845"
+        android:layout_alignStart="@id/center"
+        android:layout_above="@id/center"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#37FF00"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#22FFCB"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#3BD8FF"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#452312"
+        android:layout_toEndOf="@id/center"
+        android:layout_above="@id/center"/>
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#852312"
+        android:layout_toStartOf="@id/center"
+        android:layout_alignTop="@id/center"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:background="#FFA200">
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#772382"
+        android:layout_toEndOf="@id/center"
+        android:layout_alignTop="@id/center"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#5900FF"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#D622FF"/>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="#FF3BB7"/>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#258345"
+        android:layout_toStartOf="@id/center"
+        android:layout_below="@id/center"/>
 
-    </LinearLayout>
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#451245"
+        android:layout_alignStart="@id/center"
+        android:layout_below="@id/center"/>
+
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="#225125"
+        android:layout_toEndOf="@id/center"
+        android:layout_below="@id/center"/>
 
 
 
-</LinearLayout>
+</RelativeLayout>
