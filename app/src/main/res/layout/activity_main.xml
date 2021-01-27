@@ -6,70 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+<FrameLayout
+    android:layout_width="200dp"
+    android:layout_height="200dp"
+    android:background="#202020"
+    android:layout_centerInParent="true"/>
 
-    <TextView
-        android:id="@+id/center"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#000000"
+    <FrameLayout
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:background="#707070"
         android:layout_centerInParent="true"/>
 
-    <TextView
+    <FrameLayout
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:background="#545454"
-        android:layout_toStartOf="@id/center"
-        android:layout_above="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#386845"
-        android:layout_alignStart="@id/center"
-        android:layout_above="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#452312"
-        android:layout_toEndOf="@id/center"
-        android:layout_above="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#852312"
-        android:layout_toStartOf="@id/center"
-        android:layout_alignTop="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#772382"
-        android:layout_toEndOf="@id/center"
-        android:layout_alignTop="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#258345"
-        android:layout_toStartOf="@id/center"
-        android:layout_below="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#451245"
-        android:layout_alignStart="@id/center"
-        android:layout_below="@id/center"/>
-
-    <TextView
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="#225125"
-        android:layout_toEndOf="@id/center"
-        android:layout_below="@id/center"/>
-
-
+        android:background="#202020"
+        android:layout_centerInParent="true"/>
 
 </RelativeLayout>
