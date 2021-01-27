@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -18,14 +17,13 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/youtube"
-            />
+            android:src="@drawable/youtube" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_gravity="center"
+            android:layout_marginStart="5dp"
             android:text="Mercy00Tube"
             android:textColor="@color/white"
             android:textSize="17sp" />
@@ -33,14 +31,144 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_below="@id/upperbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@id/upperbar">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <!--원본 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#202020">
+
+                <ImageView
+                    android:id="@+id/thum1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/example1" />
+
+                <ImageView
+                    android:id="@+id/chnnel1"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum1"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/title1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum1"
+                    android:layout_alignStart="@id/chnnel1"
+                    android:layout_marginStart="50dp"
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 방재호 차진석"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subtitle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title1"
+                    android:layout_alignStart="@id/chnnel1"
+                    android:layout_marginStart="50dp"
+                    android:text="피식대학Psick Univ\n조회수 7.2천 · 1시간 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#202020">
+
+                <ImageView
+                    android:id="@+id/thum2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/example2" />
+
+                <ImageView
+                    android:id="@+id/chnnel2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum2"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum2"
+                    android:layout_alignStart="@id/chnnel2"
+                    android:layout_marginStart="50dp"
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 최준 차진석"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title2"
+                    android:layout_alignStart="@id/chnnel2"
+                    android:layout_marginStart="50dp"
+                    android:text="피식대학Psick Univ\n조회수 32만 · 4일 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#202020">
+
+                <ImageView
+                    android:id="@+id/thum3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/example3" />
+
+                <ImageView
+                    android:id="@+id/chnnel3"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum3"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum3"
+                    android:layout_alignStart="@id/chnnel3"
+                    android:layout_marginStart="50dp"
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 방재호 임플란티드키드"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subtitle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title3"
+                    android:layout_alignStart="@id/chnnel3"
+                    android:layout_marginStart="50dp"
+                    android:text="피식대학Psick Univ\n조회수 20만 · 1주 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -51,49 +179,131 @@
                     android:id="@+id/thum1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/example1"/>
+                    android:src="@drawable/example1" />
+
                 <ImageView
                     android:id="@+id/chnnel1"
                     android:layout_width="40dp"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/profile"
                     android:layout_below="@id/thum1"
-                    android:layout_marginStart="50dp"/>
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
+
                 <TextView
                     android:id="@+id/title1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingTop="15dp"
                     android:layout_below="@id/thum1"
-                    android:text="[B대면데이트]2:1데이트 방재호 차진석"
                     android:layout_alignStart="@id/chnnel1"
                     android:layout_marginStart="50dp"
-                    android:textSize="14sp"
-                    android:textColor="@color/white"/>
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 방재호 차진석"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
                 <TextView
                     android:id="@+id/subtitle1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/title1"
-                    android:text="피식대학Psick Univ\n조회수 7.2천 · 1시간 전"
                     android:layout_alignStart="@id/chnnel1"
                     android:layout_marginStart="50dp"
-                    android:textSize="10sp"
-                    android:textColor="@color/white"/>
+                    android:text="피식대학Psick Univ\n조회수 7.2천 · 1시간 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
 
             </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#202020">
 
+                <ImageView
+                    android:id="@+id/thum2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/example2" />
 
+                <ImageView
+                    android:id="@+id/chnnel2"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum2"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
 
+                <TextView
+                    android:id="@+id/title2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum2"
+                    android:layout_alignStart="@id/chnnel2"
+                    android:layout_marginStart="50dp"
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 최준 차진석"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
 
+                <TextView
+                    android:id="@+id/subtitle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title2"
+                    android:layout_alignStart="@id/chnnel2"
+                    android:layout_marginStart="50dp"
+                    android:text="피식대학Psick Univ\n조회수 32만 · 4일 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
 
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="#202020">
+
+                <ImageView
+                    android:id="@+id/thum3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/example3" />
+
+                <ImageView
+                    android:id="@+id/chnnel3"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum3"
+                    android:layout_marginStart="50dp"
+                    android:src="@drawable/profile" />
+
+                <TextView
+                    android:id="@+id/title3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/thum3"
+                    android:layout_alignStart="@id/chnnel3"
+                    android:layout_marginStart="50dp"
+                    android:paddingTop="15dp"
+                    android:text="[B대면데이트]2:1데이트 방재호 임플란티드키드"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/subtitle3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title3"
+                    android:layout_alignStart="@id/chnnel3"
+                    android:layout_marginStart="50dp"
+                    android:text="피식대학Psick Univ\n조회수 20만 · 1주 전"
+                    android:textColor="@color/white"
+                    android:textSize="10sp" />
+
+            </RelativeLayout>
 
 
         </LinearLayout>
 
     </ScrollView>
-
-
 
 
 </RelativeLayout>
