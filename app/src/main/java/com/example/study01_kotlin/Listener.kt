@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.ImageView
 import android.widget.TextView
 
 class Listener : AppCompatActivity() {
@@ -12,6 +13,7 @@ class Listener : AppCompatActivity() {
         setContentView(R.layout.activity_listener)
 
         val hello:TextView=findViewById(R.id.hello)
+        val image:ImageView=findViewById(R.id.image)
 
         //세가지 방법
         //람다
@@ -30,6 +32,8 @@ class Listener : AppCompatActivity() {
         var click = object : View.OnClickListener{
             override fun onClick(v: View?) {
                 Log.d("click","Click")
+                hello.setText("안녕하세요")
+                image.setImageResource(R.drawable.youtube)
             }
         }
         hello.setOnClickListener (click)
@@ -37,5 +41,11 @@ class Listener : AppCompatActivity() {
 
 
 
-    }
+        //뷰를 조작하는 방법
+        //1.setText 2.setImageResource
+
+
+
+
+   }
 }
