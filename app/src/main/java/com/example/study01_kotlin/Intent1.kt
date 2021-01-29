@@ -3,6 +3,7 @@ package com.example.study01_kotlin
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.TextView
 
 class Intent1 : AppCompatActivity() {
@@ -28,7 +29,18 @@ class Intent1 : AppCompatActivity() {
                 this.putExtra("number1",1)
                 this.putExtra("number2",2)
             }
-            startActivity(intent2)
+            //요청에 대한 결과값을 받기위해서는 아래 함수를 사용해야함
+            startActivityForResult(intent2,200)
         }
+    }
+
+    //인텐트2로부터 결과를 받는 함수
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        //내가 보낸 결과가 맞는지 알기위해 요청 코드조건문
+        if(requestCode==200){
+            var result = data?.getIntExtra("result",0)
+            Log.d("number",result.toString())
+        }
+        super.onActivityResult(requestCode, resultCode, data)
     }
 }
