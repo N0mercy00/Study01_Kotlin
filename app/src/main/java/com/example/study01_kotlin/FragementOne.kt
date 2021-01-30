@@ -39,6 +39,8 @@ class FragementOne : Fragment(){
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         Log.d("life_cycle","FonActivityCreated")
+        val data = arguments?.getString("hello")
+        Log.d("data",data.toString())
         super.onActivityCreated(savedInstanceState)
     }
 
