@@ -6,12 +6,20 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.Fragment
 
 class FragementOne : Fragment(){
+
+    interface OnDataPassListener{
+        fun onDataPass(data:String?)
+    }
+    lateinit var dataPassListener : OnDataPassListener
+
     override fun onAttach(context: Context) {
         Log.d("life_cycle","FonAttach")
         super.onAttach(context)
+        dataPassListener = context as OnDataPassListener
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +43,8 @@ class FragementOne : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         Log.d("life_cycle","FonViewCreated")
         super.onViewCreated(view, savedInstanceState)
+
+
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

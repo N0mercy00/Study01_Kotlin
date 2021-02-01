@@ -20,7 +20,7 @@ class FragmentActivity : AppCompatActivity() {
         var btn_button2 : Button = findViewById(R.id.btn_button2)
         var fragementOne : Fragment = FragementOne()
 
-        //프라그먼트에 데이터를 넣어주는 방법
+        //프라그먼트에 데이터를 넣어주는 방법(엑티비티에서 프라그먼트로)
         //번들을 만들어서 끼워줘야함
         val bundle:Bundle = Bundle()
         bundle.putString("hello","hello")
