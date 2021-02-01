@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Study01_Kotlin</string>
+    <string name="hello">hello im string no.1</string>
 </resources>
