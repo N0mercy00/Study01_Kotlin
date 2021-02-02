@@ -35,7 +35,13 @@ class ThreadActivity : AppCompatActivity() {
 
         //람다를 사용하여 더욱 단축하기
         Thread(Runnable {
+
+            Thread.sleep(2000)
             Log.d("thread1","is made 3")
+            runOnUiThread{
+                btn_thread.setBackgroundColor(getColor(R.color.testColor))
+            }
+
         }).start()
 
 
