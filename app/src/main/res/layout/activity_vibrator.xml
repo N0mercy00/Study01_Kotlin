@@ -12,5 +12,11 @@
         android:layout_height="100dp"
         android:text="vibe"
         android:layout_gravity="center"/>
+    <Button
+        android:id="@+id/btn_ring"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="ALM"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
