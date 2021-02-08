@@ -11,7 +11,7 @@ class Callbook : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_callbook)
 
-        val phonebook = createFakePhoneBook()
+        val phonebook = createFakePhoneBook(50)
         createBookList(phonebook)
     }
 
