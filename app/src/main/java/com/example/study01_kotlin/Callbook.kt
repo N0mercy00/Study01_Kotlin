@@ -1,8 +1,10 @@
 package com.example.study01_kotlin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 
@@ -30,7 +32,17 @@ class Callbook : AppCompatActivity() {
             val view =layoutInflater.inflate(R.layout.callbook_item_view,null)
             val personNameView = view.findViewById<TextView>(R.id.tv_personname)
             personNameView.setText(Book.personList.get(i).name)
+            addSetOnClickListener(Book.personList.get(i),view)
             container.addView(view)
+        }
+    }
+
+    fun addSetOnClickListener(person: Person, view: View){
+        view.setOnClickListener {
+            val intent = Intent(this,CallBookDetail::class.java)
+            intent.putExtra("name",person.name)
+            intent.putExtra("number",person.number)
+            startActivity(intent)
         }
     }
 }

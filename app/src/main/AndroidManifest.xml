@@ -12,18 +12,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Study01_Kotlin">
+        <activity android:name=".CallBookDetail"></activity>
         <activity android:name=".Callbook">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".AddView">
-
-        </activity>
-        <activity android:name=".Library"></activity>
+        <activity android:name=".AddView"></activity>
+        <activity android:name=".Library" />
         <activity android:name=".Vibrator" />
         <activity android:name=".ThreadActivity" />
         <activity android:name=".Context" />

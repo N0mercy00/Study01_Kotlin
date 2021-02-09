@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CallBookDetail"
+    android:orientation="vertical"
+    android:background="#323131">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/example1"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/profile"
+        android:layout_marginBottom="15dp"/>
+    <TextView
+        android:id="@+id/tv_person_detailname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="사용자"
+        android:textSize="50sp"
+        android:textColor="#ffffff"/>
+    <TextView
+        android:id="@+id/tv_person_detailnumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="010-1111-1234"
+        android:textSize="50sp"
+        android:textColor="#ffffff"/>
+
+
+</LinearLayout>
