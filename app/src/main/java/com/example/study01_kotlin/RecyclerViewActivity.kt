@@ -2,10 +2,13 @@ package com.example.study01_kotlin
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.GridLayout
 import android.widget.TextView
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.activity_recycler_view2.*
@@ -20,7 +23,8 @@ class RecyclerViewActivity : AppCompatActivity() {
         }
         val adapter = RecyclerViewAdapter(carList, LayoutInflater.from(this))
         recycler_view.adapter=adapter
-        recycler_view.layoutManager=LinearLayoutManager(this)
+        //recycler_view.layoutManager=LinearLayoutManager(this)]
+        recycler_view.layoutManager = GridLayoutManager(this,2)
     }
 }
 
@@ -29,12 +33,17 @@ class RecyclerViewAdapter(
     val inflater: LayoutInflater
 ): RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
 
-    class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
         var carName: TextView
         var carEngine : TextView
         init {
             carName=itemView.findViewById(R.id.tv_carname)
             carEngine=itemView.findViewById(R.id.tv_carengine)
+
+            itemView.setOnClickListener {
+                val engineName = itemList.get(adapterPosition).engine
+                Log.d("engine",engineName)
+            }
         }
     }
 
