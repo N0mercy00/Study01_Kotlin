@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_list_view.*
 
 class ListView : AppCompatActivity() {
@@ -21,6 +22,15 @@ class ListView : AppCompatActivity() {
 
         val adapter = ListViewAdapter(carList, LayoutInflater.from(this))
         lv_listview.adapter=adapter
+        //아이템 클릭 리스너
+        lv_listview.setOnItemClickListener { parent, view, position, id ->
+            //아이템의 정보를 받아오기 as Car부분은 잘 이해안되니 나중에 다시보기
+            val carname = (adapter.getItem(position)as Car).name
+            val carengine = (adapter.getItem(position)as Car).engine
+
+            Toast.makeText(this,carname+" "+carengine,Toast.LENGTH_SHORT).show()
+
+        }
     }
 }
 
