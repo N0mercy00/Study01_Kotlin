@@ -17,7 +17,7 @@ class TabPagerActivity : AppCompatActivity() {
         tab_layout.addTab(tab_layout.newTab().setText("TWO"))
         tab_layout.addTab(tab_layout.newTab().setText("THREE"))
 
-        val pagerAdapter =PagerAdapter(supportFragmentManager,3)
+        val pagerAdapter =FragmentPageAdapter(supportFragmentManager,3)
         view_pager.adapter=pagerAdapter
 
         //탭이 선택되었을때 역할을 하는 리스너
@@ -42,7 +42,7 @@ class TabPagerActivity : AppCompatActivity() {
     }
 }
 
-class PagerAdapter(
+class FragmentPageAdapter(
     fragmentManager: FragmentManager,
     val tabCount:Int
 ):FragmentPagerAdapter(fragmentManager){
