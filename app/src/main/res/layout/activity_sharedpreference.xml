@@ -5,11 +5,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Sharedpreference"
-    android:orientation="vertical">
+    android:orientation="horizontal">
 
     <Button
-        android:id="@+id/btn_sp1"
+        android:id="@+id/btn_sp1_load"
         android:layout_width="100dp"
-        android:layout_height="100dp"/>
+        android:layout_height="100dp"
+        android:text="불러오기"/>
+
+    <Button
+        android:id="@+id/btn_sp1_save"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="save"/>
+
+    <Button
+        android:id="@+id/btn_sp1_delete"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="delete"/>
 
 </LinearLayout>
