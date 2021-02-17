@@ -5,11 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ProgressBar
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_async.*
 
 class AsyncActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_async)
+
+        var task:BackgroundAsyncTask?=null
+        btn_async_start.setOnClickListener {
+            task = BackgroundAsyncTask(pb_progressbar,tv_astnc_ment)
+            task?.execute()
+        }
+        btn_async_cancle.setOnClickListener {
+            task?.cancel(true)
+        }
     }
 }
 
@@ -40,7 +50,7 @@ class BackgroundAsyncTask(
             }
             try{
                 //컴퓨터는 너무 빨리차서 천천히
-                Thread.sleep(100)
+                Thread.sleep(10)
             }catch (e:Exception){
                 e.printStackTrace()
             }
@@ -52,7 +62,7 @@ class BackgroundAsyncTask(
     override fun onProgressUpdate(vararg values: Int?) {
         //values는 두인백그라운드에서 사용되는 percent입니다.
         progressBar.setProgress(values[0]?:0)
-        progressText.setText("퍼센트 : "+ values[0])
+        progressText.setText("실행중 : "+ values[0]+" %")
         super.onProgressUpdate(*values)
     }
 
