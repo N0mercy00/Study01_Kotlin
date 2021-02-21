@@ -44,8 +44,8 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="18dp"
                 android:background="#ffffff"
-                android:gravity="center"
-                android:hint="아이디를 입력하세요"
+                android:paddingLeft="10dp"
+                android:hint="전화번호, 사용자 이름 또는 이메일"
                 android:textColorHint="#79383A3C"
                 android:backgroundTint="#fafafa"/>
 
@@ -56,8 +56,8 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="6dp"
                 android:background="#ffffff"
-                android:gravity="center"
-                android:hint="비밀번호를 입력해주세요"
+                android:paddingLeft="10dp"
+                android:hint="비밀번호"
                 android:textColorHint="#79383A3C"
                 android:backgroundTint="#fafafa"/>
 
@@ -68,8 +68,8 @@
                 android:layout_gravity="center"
                 android:layout_marginBottom="6dp"
                 android:background="#ffffff"
-                android:gravity="center"
-                android:hint="비밀번호를 다시 입력해주세요"
+                android:paddingLeft="10dp"
+                android:hint="비밀번호 확인"
                 android:textColorHint="#79383A3C"
                 android:backgroundTint="#fafafa"/>
 
