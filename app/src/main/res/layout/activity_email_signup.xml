@@ -4,138 +4,195 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EmailSignupActivity"
+    android:background="#fafafa"
 
     android:orientation="vertical"
-    android:background="#ffffff">
+    tools:context=".EmailSignupActivity">
 
-<TextView
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/shadow"
+        android:orientation="vertical"
+
+
+        >
+
+        <ImageView
+            android:padding="10dp"
+            android:layout_width="360dp"
+            android:layout_height="100dp"
+            android:src="@drawable/dongstagram"
+            android:layout_gravity="center"
+
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <EditText
+                android:id="@+id/et_username_inputbox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="18dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:hint="아이디를 입력하세요"
+                android:textColorHint="#79383A3C"
+                android:backgroundTint="#fafafa"/>
+
+            <EditText
+                android:id="@+id/et_password1_inputbox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:hint="비밀번호를 입력해주세요"
+                android:textColorHint="#79383A3C"
+                android:backgroundTint="#fafafa"/>
+
+            <EditText
+                android:id="@+id/et_password2_inputbox"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="6dp"
+                android:background="#ffffff"
+                android:gravity="center"
+                android:hint="비밀번호를 다시 입력해주세요"
+                android:textColorHint="#79383A3C"
+                android:backgroundTint="#fafafa"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/customlogin"
+            android:gravity="center"
+            android:padding="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="15dp"
+            android:text="로그인"
+            android:textColor="#f2fcff"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#dbdbdb"
+                    android:text="-------------------------------" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="또는"
+                    android:textColor="#8d8e8f"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="#dbdbdb"
+                    android:text="-------------------------------" />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="FaceEbook 으로 로그인 "
+                android:textColor="#375184"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="비밀번호를 잊으셨나요?"
+                android:textSize="13sp"
+                android:textColor="#163249"
+                android:layout_marginBottom="10dp"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="50dp"
-    android:text="DONGSTAGRAM"
-    android:textSize="50dp"
-    android:gravity="center"
-    android:layout_marginTop="120dp"
-    android:textColor="#564B4B"/>
+    android:orientation="horizontal"
+    android:layout_marginTop="20dp"
+    android:background="@drawable/shadow">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:padding="16dp"
-        android:layout_marginBottom="20dp">
-        <EditText
-            android:id="@+id/et_username_inputbox"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="#ffffff"
-            android:hint="아이디를 입력하세요"
-            android:layout_marginBottom="18dp"
-            android:textColorHint="#79383A3C"/>
-        <EditText
-            android:id="@+id/et_password1_inputbox"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="#ffffff"
-            android:hint="비밀번호를 입력해주세요"
-            android:layout_marginBottom="6dp"
-            android:textColorHint="#79383A3C"/>
-        <EditText
-            android:id="@+id/et_password2_inputbox"
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:background="#ffffff"
-            android:hint="비밀번호를 다시 입력해주세요"
-            android:layout_marginBottom="6dp"
-            android:textColorHint="#79383A3C"/>
-
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/btn_login"
-        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingBottom="15dp"
-        android:padding="10dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:text="로그인"
-        android:textStyle="bold"
-        android:textSize="15sp"
-        android:textColor="#f2fcff"
-        android:background="#afdcf9"
-        android:layout_marginBottom="10dp"
-        />
+        android:orientation="horizontal">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_margin="10dp">
-
-        <TextView
-            android:text="-------------------------------"
-            android:layout_width="150dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="#dbdbdb"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="또는"
-            android:textColor="#8d8e8f"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:textSize="15sp"/>
-        <TextView
-            android:text="-------------------------------"
-            android:layout_width="150dp"
-            android:layout_height="1dp"
-            android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:background="#dbdbdb"/>
+            android:text="계정이 없으신가요?" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:gravity="center">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="계정이 없으신가요?"/>
         <TextView
             android:id="@+id/btn_register"
             android:layout_width="110dp"
-            android:gravity="center"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:paddingBottom="15dp"
+            android:background="#ffffff"
+            android:gravity="center"
             android:padding="15dp"
             android:paddingLeft="15dp"
             android:paddingRight="15dp"
+            android:paddingBottom="15dp"
             android:text="가입하기"
-            android:textStyle="bold"
-            android:textSize="15sp"
             android:textColor="#3985b8"
-            android:background="#ffffff"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
     </LinearLayout>
+
+</LinearLayout>
+
 
 
 
