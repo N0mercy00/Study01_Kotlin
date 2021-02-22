@@ -38,7 +38,7 @@
         <activity android:name=".Library" />
         <activity android:name=".Vibrator" />
         <activity android:name=".ThreadActivity" />
-        <activity android:name=".Context" />
+        <activity android:name=".ContextActivity" />
         <activity android:name=".Resource" />
         <activity android:name=".NullSafety" />
         <activity android:name=".FragmentActivity" />
