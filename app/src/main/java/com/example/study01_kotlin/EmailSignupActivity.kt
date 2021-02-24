@@ -2,6 +2,7 @@ package com.example.study01_kotlin
 
 import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -46,9 +47,9 @@ class EmailSignupActivity : AppCompatActivity() {
             register(this)
         }
         loginBtn.setOnClickListener {
-            val sp = activity.getSharedPreferences("login_sp",Context.MODE_PRIVATE)
-            val token = sp.getString("login_sp","")
-            Log.d("testtoken","token is : " + token)
+           startActivity(
+               Intent(this,LoginActivity::class.java)
+           )
 
         }
 
@@ -56,9 +57,9 @@ class EmailSignupActivity : AppCompatActivity() {
 
     //가입함수
     fun register(activity: Activity){
-        val username = usernameView.text.toString()
-        val password1 = userPasswordView1.text.toString()
-        val password2 = userPasswordView2.text.toString()
+        val username = getUserName()
+        val password1 = getUserPassword1()
+        val password2 = getUserPassword1()
 
 
         (application as MasterApplication).service.register(
@@ -71,6 +72,7 @@ class EmailSignupActivity : AppCompatActivity() {
                     val user = response.body()
                     val token = user!!.token!!
                     saveUserToken(token,activity)
+                    (application as MasterApplication).createRetrofit()
                 }
             }
             override fun onFailure(call: Call<User>, t: Throwable) {
