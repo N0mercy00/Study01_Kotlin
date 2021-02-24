@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -19,13 +20,14 @@ class EmailSignupActivity : AppCompatActivity() {
     lateinit var userPasswordView1 : EditText
     lateinit var userPasswordView2 : EditText
     lateinit var registerBtn:TextView
+    lateinit var loginBtn:TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_email_signup)
 
         initView(this@EmailSignupActivity)
-        setupListener()
+        setupListener(this)
     }
 
     //아이디와 비밀번호를 ㅁ가져올 수 있는 함수를 먼저 만들자
@@ -36,12 +38,20 @@ class EmailSignupActivity : AppCompatActivity() {
         userPasswordView1=activity.findViewById(R.id.et_password1_inputbox)
         userPasswordView2=activity.findViewById(R.id.et_password2_inputbox)
         registerBtn=activity.findViewById(R.id.btn_register)
+        loginBtn=activity.findViewById(R.id.btn_login)
     }
 
-    fun setupListener(){
+    fun setupListener(activity: Activity){
         registerBtn.setOnClickListener {
             register(this)
         }
+        loginBtn.setOnClickListener {
+            val sp = activity.getSharedPreferences("login_sp",Context.MODE_PRIVATE)
+            val token = sp.getString("login_sp","")
+            Log.d("testtoken","token is : " + token)
+
+        }
+
     }
 
     //가입함수
@@ -49,9 +59,11 @@ class EmailSignupActivity : AppCompatActivity() {
         val username = usernameView.text.toString()
         val password1 = userPasswordView1.text.toString()
         val password2 = userPasswordView2.text.toString()
-        val register = Register(username,password1,password2)
 
-        (application as MasterApplication).service.register(register).enqueue(object:
+
+        (application as MasterApplication).service.register(
+            username, password1, password2
+        ).enqueue(object:
             Callback<User> {
             override fun onResponse(call: Call<User>, response: Response<User>) {
                 if(response.isSuccessful){
