@@ -14,13 +14,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Study01_Kotlin">
-        <activity android:name=".LoginActivity"></activity>
-        <activity android:name=".EmailSignupActivity">
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".EmailSignupActivity">
+
         </activity>
         <activity android:name=".PermmisionA"></activity>
         <activity android:name=".AsyncActivity" />
